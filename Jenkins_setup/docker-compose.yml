@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+  jenkins:
+    depends_on: 
+        - portainer
+    image: my-jenkins
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+      - ../../jenkins_volume:/var/jenkins_home
+    environment:
+      - JENKINS_USER=jenkins
+      - JENKINS_PASS=jenkins
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+
+volumes:
+  jenkins_volume: {}

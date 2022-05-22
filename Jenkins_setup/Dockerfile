@@ -2,7 +2,7 @@ FROM jenkins/jenkins:lts
 USER root
 
 RUN apt-get update
-RUN apt-get install docker.io -y
+RUN apt-get install docker.io docker-compose -y
 
 USER jenkins
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
