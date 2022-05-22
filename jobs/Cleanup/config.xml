@@ -22,6 +22,7 @@
         stage(&apos;Stop&apos;) {
             steps {
                 sh &quot;&quot;&quot;
+                docker stop php-app
                 docker-compose -f $JENKINS_HOME/Database_setup/docker-database.yml stop
                 docker-compose -f $JENKINS_HOME/basic/docker-app.yml stop
                 &quot;&quot;&quot;

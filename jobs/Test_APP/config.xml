@@ -25,6 +25,7 @@
                 docker build -t test-mysql $JENKINS_HOME/Database_setup
                 docker build -t test-app -f $JENKINS_HOME/basic/app.Dockerfile $JENKINS_HOME/basic
                 docker build -t test-kong -f $JENKINS_HOME/basic/kong.Dockerfile $JENKINS_HOME/basic
+                docker build -t my-loki -f $JENKINS_HOME/logging_setup/loki.Dockerfile $JENKINS_HOME/logging_setup
                 &quot;&quot;&quot;
             }
         }

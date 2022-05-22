@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  loki:
+    image: my-loki
+    volumes:
+      - ../logging_setup/wal:/wal
+    entrypoint:
+      - /usr/bin/loki
+      - -config.file=/etc/config/loki.yml
+    ports:
+      - 3100:3100
+    networks:
+      - database_setup_w3snet
+  
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - grafana-volume:/var/lib/grafana
+    ports:
+      - 5000:3000
+    depends_on:
+      - loki
+    networks:
+      - database_setup_w3snet
+
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    hostname: rabbitmq
+
+volumes:
+  grafana-volume:
+
+networks:
+  database_setup_w3snet:
+    external: true
