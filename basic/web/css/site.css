@@ -109,6 +109,7 @@ img {
     width: 100%;
     justify-content: space-around;
 }
+
 .control-label{
     width: 250px;
     display: none;
@@ -166,6 +167,60 @@ img {
     font-size:30px;
     color:#455e45;
 }
+
+.reservation-create{
+    color: #1c0d0d;
+    padding: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.reservation-create h1{
+    padding-bottom:60px;
+    font-size:30px;
+    color:#455e45;
+}
+.reservation-update{
+    color: #1c0d0d;
+    padding: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.reservation-update h1{
+    padding-bottom:60px;
+    font-size:30px;
+    color:#455e45;
+}
+
+.shelter2-create{
+    color: #1c0d0d;
+    padding: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shelter2-create h1{
+    padding-bottom:60px;
+    font-size:30px;
+    color:#455e45;
+}
+.shelter2-update{
+    color: #1c0d0d;
+    padding: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shelter2-update h1{
+    padding-bottom:60px;
+    font-size:30px;
+    color:#455e45;
+}
 .shelter-form{
     padding: 35px 75px 20px 75px;
     width: 70%;
@@ -175,6 +230,30 @@ img {
 }
 
 .shelter-form .help-block{
+    color: #a60b1a
+}
+
+.reservation-form{
+    padding: 35px 75px 20px 75px;
+    width: 70%;
+    border: 3px solid #455e45;
+	color: #455e45;
+	border-radius: 40px;
+}
+
+.reservation-form .help-block{
+    color: #a60b1a
+}
+
+.shelter2-form{
+    padding: 35px 75px 20px 75px;
+    width: 70%;
+    border: 3px solid #455e45;
+	color: #455e45;
+	border-radius: 40px;
+}
+
+.shelter2-form .help-block{
     color: #a60b1a
 }
 
@@ -228,6 +307,90 @@ img {
 }
 .table-bordered th, .table-bordered td {
     border: 0px solid #dee2e6;
+}
+
+.shelter2-view p{
+    display: flex;
+    padding:30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.shelter2-view h1{
+    display: flex;
+    padding:30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size:30px;
+    color:#455e45;
+}
+.shelter2-view .table{
+	color: #1c0d0d;
+	display:flex;
+	justify-content: center;
+	margin: auto;
+	width: 60%;
+	background-color: #e6e6e6;
+	padding: 8px 30px;
+	font-size: 16px;
+    border-collapse: collapse;
+    border-radius: 30px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px #455e45;  
+}
+.shelter2-view .table tbody{
+    width: 100%;
+}
+.shelter2-view .table tbody tr{
+   width: 70%;
+   background-color: none;
+}
+.shelter2-view .table th{
+   width: 50%;
+   background-color: none;
+}
+
+.reservation-view p{
+    display: flex;
+    padding:30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.reservation-view h1{
+    display: flex;
+    padding:30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size:30px;
+    color:#455e45;
+}
+.reservation-view .table{
+	color: #1c0d0d;
+	display:flex;
+	justify-content: center;
+	margin: auto;
+	width: 60%;
+	background-color: #e6e6e6;
+	padding: 8px 30px;
+	font-size: 16px;
+    border-collapse: collapse;
+    border-radius: 30px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px #455e45;  
+}
+.reservation-view .table tbody{
+    width: 100%;
+}
+.reseravtion-view .table tbody tr{
+   width: 70%;
+   background-color: none;
+}
+.reservation-view .table th{
+   width: 50%;
+   background-color: none;
 }
 
 
@@ -326,6 +489,65 @@ img {
     vertical-align: middle;
 }
 .shelter-index .table-bordered thead th, .table-bordered thead td{
+    border-bottom: 2px solid #DED2EF;
+}
+
+
+
+.reservation-index{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reservation-index .table{
+	color: #1c0d0d;
+	margin: 40px auto;
+	background-color: #e6e6e6;
+	font-size: 16px;
+    border-collapse: collapse;
+    border-radius: 30px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px #455e45;  
+}
+.reservation-index .table a{
+	color: #455e45;
+}
+.reservation-index .table td, .reservation-index .table thead th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.reservation-index .table-bordered thead th, .table-bordered thead td{
+    border-bottom: 2px solid #DED2EF;
+}
+
+.shelter2-index{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shelter2-index .table{
+	color: #1c0d0d;
+	margin: 40px auto;
+	background-color: #e6e6e6;
+	font-size: 16px;
+    border-collapse: collapse;
+    border-radius: 30px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 3px #455e45;  
+}
+.shelter2-index .table a{
+	color: #455e45;
+}
+.shelter2-index .table td, .shelter2-index .table thead th{
+    text-align: center;
+    vertical-align: middle;
+}
+.shelter2-index .table-bordered thead th, .table-bordered thead td{
     border-bottom: 2px solid #DED2EF;
 }
 .hidden{

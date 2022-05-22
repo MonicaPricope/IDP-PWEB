@@ -37,7 +37,8 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav justify-content-end'],
         'items' => [
-            ['label' => 'Shelters', 'url' => ['/shelter/index']],
+            ['label' => 'Shelters', 'url' => ['/shelter2/index']],
+            ['label' => 'Reservations', 'url' => ['/reservation/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
