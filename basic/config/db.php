@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=w3snet-mysql;dbname=test',
+    'dsn' => 'mysql:host=database_setup_mysql-server_1;dbname=test',
     'username' => 'appuser',
     'password' => 'appuserPasswd',
     'charset' => 'utf8',
@@ -12,4 +12,3 @@ return [
     //'schemaCacheDuration' => 60,
     //'schemaCache' => 'cache',
 ];
-

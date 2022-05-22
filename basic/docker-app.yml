@@ -8,7 +8,7 @@ services:
     ports:
       - '8001:80'
     networks:
-      - backend_setup_w3snet
+      - database_setup_w3snet
 
   kong:
     image: test-kong
@@ -26,8 +26,8 @@ services:
       - 8000:8000 #expunerea porturilor
       - 8443:8443
     networks:
-      - backend_setup_w3snet
+      - database_setup_w3snet
 
 networks:
-  backend_setup_w3snet:
+  database_setup_w3snet:
     external: true
