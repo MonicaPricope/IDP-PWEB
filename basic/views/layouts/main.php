@@ -31,23 +31,21 @@ AppAsset::register($this);
         'brandLabel' => Html::img('@web/img/peace-1.png', ['alt'=>Yii::$app->name]),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar-expand-md',
-            'style' => Yii::$app->user->identity ? ('display:block;'
-            ) : ( 'display:block;' )
+            'class' => 'navbar navbar-expand-md'
         ],
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav justify-content-end'],
         'items' => [
-            ['label' => 'Shelter', 'url' => ['/shelter/index']],
+            ['label' => 'Shelters', 'url' => ['/shelter/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
+                    'Logout (' . Yii::$app->user->identity->username . ') ',
+                    ['class' => 'btn-logout nav-link logout']
                 )
                 . Html::endForm()
                 . '</li>'

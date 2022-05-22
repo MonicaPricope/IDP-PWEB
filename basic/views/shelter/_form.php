@@ -12,20 +12,20 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true, 'placeholder' => 'Title']) ?>
 
-    <?= $form->field($model, 'location')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'location')->textInput(['maxlength' => true, 'placeholder' => 'Location']) ?>
 
-    <?= $form->field($model, 'admin_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'admin_name')->textInput(['maxlength' => true, 'placeholder' => 'Admin\'s Name']) ?>
 
-    <?= $form->field($model, 'admin_phone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'admin_phone')->textInput(['maxlength' => true, 'placeholder' => 'Admin\'s Phone Number']) ?>
 
-    <?= $form->field($model, 'ocupants')->textInput() ?>
+    <?= $form->field($model, 'ocupants')->textInput(['placeholder' => 'No Ocupants']) ?>
 
-    <?= $form->field($model, 'capacity')->textInput() ?>
+    <?= $form->field($model, 'capacity')->textInput(['placeholder' => 'Capacity']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

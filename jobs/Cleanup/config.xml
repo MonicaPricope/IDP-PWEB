@@ -22,16 +22,16 @@
         stage(&apos;Stop&apos;) {
             steps {
                 sh &quot;&quot;&quot;
-                docker-compose -f $JENKINS_HOME/Backend_setup/docker-database.yml stop
-                docker-compose -f $JENKINS_HOME/basic/docker-compose.yml stop
+                docker-compose -f $JENKINS_HOME/Database_setup/docker-database.yml stop
+                docker-compose -f $JENKINS_HOME/basic/docker-app.yml stop
                 &quot;&quot;&quot;
             }
         }
         stage(&apos;Cleanup&apos;) {
             steps {
                 sh &quot;&quot;&quot;
-                docker-compose -f $JENKINS_HOME/Backend_setup/docker-database.yml rm -fv
-                docker-compose -f $JENKINS_HOME/basic/docker-compose.yml rm -fv
+                docker-compose -f $JENKINS_HOME/Database_setup/docker-database.yml rm -fv
+                docker-compose -f $JENKINS_HOME/basic/docker-app.yml rm -fv
                 docker volume prune
                 &quot;&quot;&quot;
             }

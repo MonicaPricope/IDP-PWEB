@@ -10,15 +10,15 @@ $this->title = 'My Yii Application';
         <div class = "container">
             <div class="row justify-content-around">
                 <div class="main-buttons col-4">
-                  <p><a class="main-btn btn btn-outline-success" href="/basic/web/index.php?r=user%2Fcreate">Register to find a shelter</a></p>
-                  <p><a class="main-btn btn btn-outline-success" href="/basic/web/index.php?r=user%2Fcreate">Register to add a shelter</a></p>
+                  <p><a class="main-btn btn btn-outline-success" href="/basic/web/index.php?r=user2%2Fcreate">Register to find a shelter</a></p>
+                  <p><a class="main-btn btn btn-outline-success" href="/basic/web/index.php?r=user2%2Fcreate">Register to add a shelter</a></p>
                   <p><a class="main-btn btn btn-outline-success" href="/basic/web/index.php?r=site%2Flogin">Login</a></p>
                 </div>
                 <div class="main-display col-4">
                   <img src="<?= Yii::$app->request->baseUrl ?>/img/peace-1.png" alt="this is an alternative text" />
                   <div class="main-text">
-                       <p>Be safe!</p>
-                    <p>Find a shelter</p>
+                       <h1>Be safe!</h1>
+                       <h1>Find a shelter</h1>
                   </div>
                 </div>
              </div>

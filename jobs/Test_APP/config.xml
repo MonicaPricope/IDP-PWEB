@@ -22,7 +22,7 @@
         stage(&apos;Build&apos;) {
             steps {
                 sh &quot;&quot;&quot;
-                docker build -t test-mysql $JENKINS_HOME/Backend_setup
+                docker build -t test-mysql $JENKINS_HOME/Database_setup
                 docker build -t test-app -f $JENKINS_HOME/basic/app.Dockerfile $JENKINS_HOME/basic
                 docker build -t test-kong -f $JENKINS_HOME/basic/kong.Dockerfile $JENKINS_HOME/basic
                 &quot;&quot;&quot;
@@ -33,7 +33,7 @@
                 stage(&apos;Deploy Database&apos;) {
                     steps {
                         sh &quot;&quot;&quot;
-                        docker-compose -f $JENKINS_HOME/Backend_setup/docker-database.yml up -d
+                        docker-compose -f $JENKINS_HOME/Database_setup/docker-database.yml up -d
                         &quot;&quot;&quot;
                     }
                 }
@@ -41,7 +41,7 @@
                     steps {
                         sleep 10
                         sh &quot;&quot;&quot;
-                        docker-compose -f $JENKINS_HOME/basic/docker-compose.yml up -d
+                        docker-compose -f $JENKINS_HOME/basic/docker-app.yml up -d
                         &quot;&quot;&quot;
                     }
                 }

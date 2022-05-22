@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400&family=Lustria&display=swap');
 body {
     background-color: #e6e6e6;
 	color: #1c0d0d;
+	font-family: 'Hepta Slab', serif;
 }
-
+h1{
+    font-family: 'Lustria', serif;
+}
 main > .container {
     padding: 30px 15px 20px;
 }
@@ -22,6 +26,12 @@ main > .container {
 	color: #e6e6e6;
 	border: 3px solid #455e45;
 	border-radius: 40px;
+}
+.btn-logout{
+    background-color: #A8C3B1;
+    border: 0px solid #ffffff;
+	color: #1c0d0d;
+	font-size: 20px;
 }
 img {
   display: block;
@@ -53,18 +63,18 @@ img {
     width: 100%;
     justify-content: space-around;
 }
-.user-create {
+.user2-create {
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.user-create h1{
+.user2-create h1{
     padding:10px 30px;
     border-bottom: 3px solid #DED2EF;
     margin-bottom: 30px;
 }
-.user-create form{
+.user2-create form{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -72,18 +82,42 @@ img {
     padding-bottom: 15px;
     width: 300px;
 }
-.user-create form .form-group{
+.user2-create form .form-group{
+    width: 100%;
+    justify-content: space-around;
+}
+.user2-update {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.user2-update h1{
+    padding:10px 30px;
+    border-bottom: 3px solid #DED2EF;
+    margin-bottom: 30px;
+}
+.user2-update form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+    width: 300px;
+}
+.user2-update form .form-group{
     width: 100%;
     justify-content: space-around;
 }
 .control-label{
     width: 250px;
+    display: none;
 }
 .form-group{
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding-bottom: 15px;
 }
 .form-control{
@@ -98,6 +132,7 @@ img {
    color: #1c0d0d ; 
    border-bottom: 3px solid #455e45;
 }
+
 .body-content{
     display:flex;
     justify-content: center;
@@ -133,9 +168,18 @@ img {
 }
 .shelter-form{
     padding: 35px 75px 20px 75px;
+    width: 70%;
     border: 3px solid #455e45;
 	color: #455e45;
 	border-radius: 40px;
+}
+
+.shelter-form .help-block{
+    color: #a60b1a
+}
+
+.user2-form .help-block{
+    color: #a60b1a
 }
 
 .shelter-view p{
@@ -187,14 +231,14 @@ img {
 }
 
 
-.user-view p{
+.user2-view p{
     display: flex;
     padding:30px;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
-.user-view h1{
+.user2-view h1{
     display: flex;
     padding:30px;
     flex-direction: row;
@@ -203,39 +247,40 @@ img {
     font-size:30px;
     color:#455e45;
 }
-.user-view .table{
+.user2-view .table{
 	color: #1c0d0d;
 	display:flex;
 	justify-content: center;
 	margin: auto;
 	width: 60%;
 	background-color: #e6e6e6;
-	padding: 8px 30px;
+	padding: 8px 40px;
 	font-size: 16px;
     border-collapse: collapse;
     border-radius: 30px;
     border-style: hidden; 
     box-shadow: 0 0 0 3px #455e45;  
 }
-.user-view .table tbody{
+
+.user2-view .table tbody{
     width: 100%;
 }
-.user-view .table tbody tr{
-   width: 70%;
+.user2-view .table tbody tr{
+   width: 78%;
    background-color: none;
 }
-.user-view .table th{
+.user2-view .table th{
    width: 79%;
    background-color: none;
 }
-.user-index{
+.user2-index{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.user-index .table{
+.user2-index .table{
 	color: #1c0d0d;
 	margin: 40px auto;
 	background-color: #e6e6e6;
@@ -245,14 +290,14 @@ img {
     border-style: hidden; 
     box-shadow: 0 0 0 3px #455e45;  
 }
-.user-index .table a{
+.user2-index .table a{
 	color: #455e45;
 }
-.user-index .table td, .shelter-index .table thead th{
+.user2-index .table td, .shelter-index .table thead th{
     text-align: center;
     vertical-align: middle;
 }
-.user-index .table-bordered thead th, .table-bordered thead td{
+.user2-index .table-bordered thead th, .table-bordered thead td{
     border-bottom: 2px solid #DED2EF;
 }
 

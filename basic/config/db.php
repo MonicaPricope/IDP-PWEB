@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=raut4837_yii2',
-    'username' => 'raut4837_test',
-    'password' => 'YHZ7xR38Z~fw',
+    'dsn' => 'mysql:host=w3snet-mysql;dbname=test',
+    'username' => 'appuser',
+    'password' => 'appuserPasswd',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
@@ -12,3 +12,4 @@ return [
     //'schemaCacheDuration' => 60,
     //'schemaCache' => 'cache',
 ];
+
