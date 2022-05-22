@@ -1,0 +1,46 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1174.vdcb_d054cf74a_">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2064.v5eef7d0982b_e"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2064.v5eef7d0982b_e">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.jira.JiraProjectProperty plugin="jira@3.7.1"/>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2660.vb_c0412dc4e6d">
+    <script>pipeline {
+    agent any
+
+    stages {
+        stage(&apos;Stop&apos;) {
+            steps {
+                sh &quot;&quot;&quot;
+                docker-compose -f $JENKINS_HOME/Backend_setup/docker-database.yml stop
+                docker-compose -f $JENKINS_HOME/basic/docker-compose.yml stop
+                &quot;&quot;&quot;
+            }
+        }
+        stage(&apos;Cleanup&apos;) {
+            steps {
+                sh &quot;&quot;&quot;
+                docker-compose -f $JENKINS_HOME/Backend_setup/docker-database.yml rm -fv
+                docker-compose -f $JENKINS_HOME/basic/docker-compose.yml rm -fv
+                docker volume prune
+                &quot;&quot;&quot;
+            }
+        }
+    }
+}
+</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

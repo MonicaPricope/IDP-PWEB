@@ -1,0 +1,2 @@
+[20-May-2022 23:07:41 Europe/Bucharest] PHP Fatal error:  Cannot redeclare app\controllers\SiteController::actionLogin() in /home3/raut4837/public_html/basic/controllers/SiteController.php on line 93
+[20-May-2022 23:28:55 Europe/Bucharest] PHP Fatal error:  Cannot redeclare app\controllers\SiteController::actionLogin() in /home3/raut4837/public_html/basic/controllers/SiteController.php on line 93

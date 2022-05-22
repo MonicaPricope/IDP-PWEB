@@ -1,0 +1,9 @@
+_format_version: "2.1"
+
+services:
+  - name: api-gateway
+    url: http://php-app:80/app/web
+    routes:
+      - name: app-route
+        paths: 
+          - /app/web
